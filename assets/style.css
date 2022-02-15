@@ -1,0 +1,11 @@
+.error{
+    border: 1px solid red;
+}
+
+.msg-reg{
+    color: red;
+}
+
+.container-reg{
+    max-width: 550px;
+}
