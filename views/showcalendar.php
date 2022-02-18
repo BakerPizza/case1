@@ -16,11 +16,11 @@
         foreach ($calendar as $p) {
         ?>
             <tr>
-                <td><?= $p['Event_date']; ?></td>
+                <td><?= $p['Event_date']; ?></td> 
                 <td><?= $p['Event_name']; ?></td>
                 <td><?= $p['Event_description']; ?></td>
             </tr>
-        <?php
+        <?php //вывести строки таблицы: дата, название, описание /\
         }
         ?>
     </tbody>
