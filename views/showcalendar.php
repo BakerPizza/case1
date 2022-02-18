@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        <?php require_once 'model/connection.php';
+        <?php require_once 'model/connection.php'; //подключение к бд
 
         $db = new Database();
 
