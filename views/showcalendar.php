@@ -1,7 +1,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Дата</th>
+            <th scope="col">Дата</th> 
             <th scope="col">Событие</th>
             <th scope="col">Описание</th>
         </tr>
@@ -9,7 +9,7 @@
     <tbody>
         <?php require_once 'model/connection.php'; //подключение к бд
 
-        $db = new Database();
+        $db = new Database(); //подкл
 
         $calendar = $db->query("SELECT * FROM `events`");  //выбрать всё из таблицы blog
 
@@ -25,3 +25,7 @@
         ?>
     </tbody>
 </table>
+
+
+
+
