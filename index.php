@@ -27,6 +27,8 @@
   </div>
   </div>
     </div>
+   
+   
     <div class="col-6">
         <?php require_once 'views/desc.php' //вывод описания?>
     </div>
