@@ -22,7 +22,6 @@
             </div>
 
 
-
        <button class="btn btn-primary" id="buttonRegUser">Сменить</button>
     </form>
         
