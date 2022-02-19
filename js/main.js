@@ -19,7 +19,6 @@ let login = document.getElementById('loginReg').value,
 
 
 
-
 $.ajax({
     method: "POST",
     url: "../controllers/registerUsers.php",
