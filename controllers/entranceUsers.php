@@ -15,7 +15,7 @@ function entranceUser($login,$password){
     ];
 
     $checkUser= $db->query("SELECT * FROM `users` WHERE `login` = :login AND `password` = :password", $param);
-
+// проверка логина и пароля для входа для входв
     if(!empty($checkUser)){
 
 
