@@ -1,6 +1,5 @@
 <?php require_once 'includes/header.php' ?>
 
-
 <body>
  <div class="container-sm">
 
