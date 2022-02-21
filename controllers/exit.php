@@ -1,5 +1,6 @@
 <?php
 session_start();
+// Выход из личного кабинета
 if (isset($_POST['ExitOnClick'])) {
     if(isset($_SESSION['User'])){
 
@@ -12,3 +13,11 @@ if (isset($_POST['ExitOnClick'])) {
 
     }
 }
+
+
+
+
+
+
+
+
