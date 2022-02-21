@@ -1,8 +1,6 @@
 <?php require_once 'includes/header.php';?>
-
 <body>
 <div class="container-sm">
-
     <h2 class="text mb-5">Регистрация</h2>
     <form>
         <div class="container-reg">
@@ -36,8 +34,6 @@
             </div>
             <div class="row mb-3"><div class="msg-reg" id = "msgReg"></div></div>
         </div>
-
-
        <button class="btn btn-primary" id="buttonRegUser">Создать аккаунт</button>
     </form>
 </div>
