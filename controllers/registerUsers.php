@@ -22,30 +22,30 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
     if($login === '' || strlen($login) < 4 || strlen($login) > 12 || preg_match('/[А-Яа-яЁё_ -]/iu', $login) ){
         $errorFields[] =  'loginReg';
     }
-
+// поля ввода логина
     if($password === '' || strlen($password) < 8 || strlen($password) > 16  ||  preg_match('/[А-Яа-яЁё_ -]/iu', $password)){
         $errorFields[] =  'passwordReg';
     }
-
+// поля ввода Пароля
     if($confirmPassword === '' || strlen($confirmPassword) < 8 || strlen($confirmPassword) > 16 || preg_match('/[А-Яа-яЁё]/iu', $confirmPassword)){
         $errorFields[] =  'confirmPassword';
     }
-
+// поля ввода повтора пароля
     if($email === '' || strlen($email) < 3 || strlen($email) > 42 || !filter_var($email, FILTER_VALIDATE_EMAIL)){
         $errorFields[] = 'email';
     }
-
+// поля ввода имени
     if($name === '' || strlen($name) < 3 || strlen($name) > 25 ||strlen($name) < 3){
         $errorFields[] =  'name';
     }
-
+// поля ввода фамилии
     if($lastname === '' || strlen($lastname) < 3 || strlen($lastname) > 30 || strlen($lastname) < 3){
         $errorFields[] =  'lastname';
     }
     if($patronymic === '' || strlen($patronymic) < 3 || strlen($patronymic) > 30 || strlen($patronymic) < 3){
         $errorFields[] =  'patronymic';
     }
-
+// поля ввода отчества
 
     if(!empty($errorFields)){
         $response = [
@@ -70,7 +70,7 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
         ];
 
     $checkLogin = $db->query("SELECT * FROM `users` WHERE `login` = :login" , $param);
-
+// проверка логинаа
     if(!empty($checkLogin)){
         $response = [
             'status' => false,
@@ -83,7 +83,7 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
 
         die();
     }
-
+// проверка пароля
         if($password === $confirmPassword) {
 
             $password = md5($password);
@@ -96,7 +96,7 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
                 'lastname' => $lastname,
                 'patronymic' => $patronymic
             ];
-            
+            // ввод данных пользователя в базу данных
             $db->execute("INSERT INTO `users` (`id`, `login`, `password` ,`email`, `name`, `lastname` , `patronymic`) VALUES (NULL, :login, :password , :email , :name , :lastname ,:patronymic)", $param);
 
             
