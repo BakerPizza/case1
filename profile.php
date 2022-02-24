@@ -13,6 +13,7 @@
             </div>
                    <button class="btn btn-primary mb-4" id="buttonRegUser">Сменить</button>
              </form>
+             
             <form>
             <div class="input-group mb-4">
                 <span class="input-group-text col-5" id="inputGroup-sizing-default">Сменить e-mail</span>
