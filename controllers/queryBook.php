@@ -4,7 +4,7 @@ require_once 'model/connection.php';
 
 $db = new Database();
 
-$bookQuery = $db->query("SELECT * FROM `library`"); //Вывод данных книг из БД //Вывод данных книг из БД 
+$bookQuery = $db->query("SELECT * FROM `library`");//Вывод данных киг из БД 
 
 foreach ($bookQuery as $one){
 
