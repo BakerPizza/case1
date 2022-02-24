@@ -114,7 +114,7 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
         else {
             $response = [
                 'status' => false,
-                'type' => 2, //Password mismatch
+                'type' => 2, //Password mismatch//проверка пароля
                 'massage' => 'пароли не совпадают',
                 ];
 
@@ -126,3 +126,9 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
 
 
 addUser($_POST['login'],$_POST['password'],$_POST['confirmPassword'],$_POST['email'],$_POST['name'],$_POST['lastname'],$_POST['patronymic']);
+
+
+
+
+
+
