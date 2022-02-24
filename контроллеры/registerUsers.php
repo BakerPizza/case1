@@ -18,35 +18,36 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
 
 
 
-
+// проверка на соответствие (длине, заполненности поля) поля ввода логина,
     if($login === '' || strlen($login) < 4 || strlen($login) > 12 || preg_match('/[А-Яа-яЁё_ -]/iu', $login) ){
         $errorFields[] =  'loginReg';
     }
-// поля ввода логина
+ // проверка на соответствие (длине, заполненности поля) поля ввода Пароля
     if($password === '' || strlen($password) < 8 || strlen($password) > 16  ||  preg_match('/[А-Яа-яЁё_ -]/iu', $password)){
         $errorFields[] =  'passwordReg';
     }
-// поля ввода Пароля
+// проверка на соответствие (длине, заполненности поля) поля ввода повтора пароля
     if($confirmPassword === '' || strlen($confirmPassword) < 8 || strlen($confirmPassword) > 16 || preg_match('/[А-Яа-яЁё]/iu', $confirmPassword)){
         $errorFields[] =  'confirmPassword';
     }
-// поля ввода повтора пароля
+// проверка на соответствие (длине, заполненности поля) поля ввода почты
     if($email === '' || strlen($email) < 3 || strlen($email) > 42 || !filter_var($email, FILTER_VALIDATE_EMAIL)){
         $errorFields[] = 'email';
     }
-// поля ввода имени
+//проверка на соответствие (длине, заполненности поля) поля ввода имени
     if($name === '' || strlen($name) < 3 || strlen($name) > 25 ||strlen($name) < 3){
         $errorFields[] =  'name';
     }
-// поля ввода фамилии
+// проверка на соответствие (длине, заполненности поля) поля ввода фамилии
     if($lastname === '' || strlen($lastname) < 3 || strlen($lastname) > 30 || strlen($lastname) < 3){
         $errorFields[] =  'lastname';
     }
+ // проверка на соответствие (длине, заполненности поля) поля ввода отчества
     if($patronymic === '' || strlen($patronymic) < 3 || strlen($patronymic) > 30 || strlen($patronymic) < 3){
         $errorFields[] =  'patronymic';
     }
-// поля ввода отчества
 
+ // если есть ошибки(сработает условие)
     if(!empty($errorFields)){
         $response = [
 
@@ -56,7 +57,7 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
             'fields' => $errorFields
 
         ];
-
+        // вывод сообщения о ошибке, необходимо проверить поля
         echo json_encode($response);
 
 
@@ -68,9 +69,9 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
     $param = [
         'login' => $login
         ];
-
+    
     $checkLogin = $db->query("SELECT * FROM `users` WHERE `login` = :login" , $param);
-// проверка логинаа
+// проверка логина
     if(!empty($checkLogin)){
         $response = [
             'status' => false,
