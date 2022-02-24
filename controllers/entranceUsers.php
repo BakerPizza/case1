@@ -39,7 +39,7 @@ function entranceUser($login,$password){
     else {
         $response = [
             'status' => false,
-            'type' => 4, //incorrect password or login
+            'type' => 4, //incorrect password or login //неверный логин или пароль (проверка)
             'massage' => 'неверный логин или пароль'
         ];
 
