@@ -12,10 +12,10 @@ foreach ($bookQuery as $one){
 <div class="card mb-3 me-3" style="width: 18rem;">
   <img src="<?= $one['Image']; ?>" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title"><?= $one['Title']; //Вывод названия книги Вывод названия книги ?></h5> 
-    <p class="card-text"><?= $one['Description']; //Вывод описания книгиВывод описания книги ?></p>
+    <h5 class="card-title"><?= $one['Title']; //Вывод названия книги книги ?></h5> 
+    <p class="card-text"><?= $one['Description']; //Вывод описания книги ?></p>
     <hr>
-    <p class="card-text">Автор: <?= $one['Author']; //Вывод автора Вывод автора ?></p>
+    <p class="card-text">Автор: <?= $one['Author']; //Вывод автора ?></p>
   </div>
 </div>
 <?php } ?>
