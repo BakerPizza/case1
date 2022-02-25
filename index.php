@@ -1,8 +1,8 @@
 <?php require_once 'includes/header.php' ?>
-
+ 
 <body>
  <div class="container-sm">
-
+ 
 <div class="container">
   <div class="row g-2">
     <div class="col-6">
@@ -27,7 +27,7 @@
   </div>
     </div>
     <div class="col-6">
-        <?php require_once 'views/desc.php' //вывод описания?>
+        <?php require_once 'views/desc.php' //вывод описания, если что?>
     </div>
   </div>
 <hr><br>
@@ -42,3 +42,4 @@
 </div>
 <?php require_once 'includes/footer.php' //фруктер ыы?>
 </body>
+ 
