@@ -86,9 +86,9 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
     }
 // проверка пароля
         if($password === $confirmPassword) {
-
+        // кодировка(шифровка) пароля
             $password = md5($password);
-
+        // создание переменной со всеми значениями из полей
             $param = [
                 'login' => $login,
                 'password' => $password,
@@ -101,7 +101,7 @@ function addUser($login,$password,$confirmPassword,$email,$name,$lastname,$patro
             $db->execute("INSERT INTO `users` (`id`, `login`, `password` ,`email`, `name`, `lastname` , `patronymic`) VALUES (NULL, :login, :password , :email , :name , :lastname ,:patronymic)", $param);
 
             
-
+        
             $_SESSION['User'] = [
                 'login' => $login
             ];
