@@ -15,8 +15,7 @@ if ($resul)
         echo "done";   
         }
     else{
-    echo "errorlog";   
-        }
+
+   
     }   
 
- ?>
