@@ -5,7 +5,7 @@
         <div class="container-reg">
             <div class="input-group mb-4">
                 <span class="input-group-text col-5" id="inputGroup-sizing-default">Сменить пароль</span>
-                <input placeholder='Введите пароль не короче 8 символов' type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="passwordReg">
+                <input placeholder='Введите пароль от 8 символов' type="password" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="passwordReg">
             </div>
             <div class="input-group mb-4">
                 <span class="input-group-text col-5" id="inputGroup-sizing-default">Подтвердить пароль</span>
