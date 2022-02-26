@@ -5,15 +5,13 @@ $db = new Database();
 
 $evaluations = $db->query("SELECT * FROM `evaluations`");  //выбрать всё из таблицы evaluations
 
-
-
 ?>
   <thead>
     <tr>
-      <th scope="col">Ученик</th>
+      <th scope="col">Учeник</th>
       <th scope="col">Учитель</th>
-      <th scope="col">Оценка</th>
-      <th scope="col">Дата</th>
+      <th scope="col">Оценкa</th>
+      <th scope="col">Дaта</th>
     </tr>
   </thead>
   <tbody>
