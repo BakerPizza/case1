@@ -1,8 +1,6 @@
 <?php require_once 'includes/header.php' ?>
- 
 <body>
  <div class="container-sm">
- 
 <div class="container">
   <div class="row g-2">
     <div class="col-6">
@@ -27,13 +25,13 @@
   </div>
     </div>
     <div class="col-6">
-        <?php require_once 'views/desc.php' //вывод описания, если что?>
+        <?php require_once 'views/desc.php' //вывод oписания?>
     </div>
   </div>
 <hr><br>
 <div class="container-sm">  
 <div class="row">
-<?php require_once 'views/showposts.php' //вывод постов?>
+<?php require_once 'views/showposts.php' //вывод пoстов?>
 </div>
 </div>
 </div>
