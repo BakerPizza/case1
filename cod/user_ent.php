@@ -5,7 +5,7 @@ $login = $_POST['log'];
 $password = $_POST['par'];
 
 
-$entrance = mysqli_query($connect , "SELECT * FROM `users` WHERE login = '$login' AND password = '$password'");
+$entrance = mysqli_query($connect , "SELECT * FROM `users` WHERE login = '$login' AND password = '$password'");// проверка логина и пароля
 
 if(mysqli_num_rows($entrance)>0){
   $user = mysqli_fetch_assoc($entrance);
